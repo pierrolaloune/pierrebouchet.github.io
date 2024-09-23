@@ -37,6 +37,71 @@
     }
   </style>
 </head>
+<meta charset="UTF-8">
+<title>Pierre Bouchet</title>
+<style>
+  /* Style pour les onglets */
+  .tab {
+    display: flex;
+    cursor: pointer;
+    background-color: #1a5400;
+    padding: 10px;
+  }
+
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style pour le contenu des onglets */
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Adding a background image and animation */
+  body {
+    background-image: url('forest-background.jpg');
+    background-size: cover;
+    animation: forestAnimation 5s ease-in-out infinite;
+  }
+
+  @keyframes forestAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Adding your photo */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+</style>
 <body>
 
 <h1>Pierre Bouchet</h1>
