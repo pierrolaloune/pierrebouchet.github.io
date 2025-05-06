@@ -1,157 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pierre Bouchet</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pierre Bouchet – PhD Candidate in Ecology</title>
   <style>
-    /* Style pour les onglets */
-    .tab {
-      display: flex;
-      cursor: pointer;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
       background-color: #1a5400;
-      padding: 10px;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
     }
 
-    .tab button {
-      background-color: inherit;
-      border: none;
-      outline: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #3b7a2f;
+      flex-wrap: wrap;
     }
 
-    .tab button:hover {
-      background-color: #ddd;
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
     }
 
-    .tab button.active {
-      background-color: #ccc;
+    nav a:hover {
+      background-color: #2d5e24;
     }
 
-    /* Style pour le contenu des onglets */
-    .tabcontent {
-      display: none;
+    section {
+      max-width: 900px;
+      margin: auto;
       padding: 20px;
-      border-top: 1px solid #ccc;
+      background: white;
+    }
+
+    h2 {
+      color: #1a5400;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .contact a {
+      color: #1a5400;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
-<meta charset="UTF-8">
-<title>Pierre Bouchet</title>
-<style>
-  /* Style pour les onglets */
-  .tab {
-    display: flex;
-    cursor: pointer;
-    background-color: #1a5400;
-    padding: 10px;
-  }
-
-  .tab button {
-    background-color: inherit;
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .tab button:hover {
-    background-color: #ddd;
-  }
-
-  .tab button.active {
-    background-color: #ccc;
-  }
-
-  /* Style pour le contenu des onglets */
-  .tabcontent {
-    display: none;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-  }
-
-  /* Adding a background image and animation */
-  body {
-    background-image: url('forest-background.jpg');
-    background-size: cover;
-    animation: forestAnimation 5s ease-in-out infinite;
-  }
-
-  @keyframes forestAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  /* Adding your photo */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-</style>
 <body>
 
-<h1>Pierre Bouchet</h1>
-<p>Doctorant en écologie</p>
+  <header>
+    <h1>Pierre Bouchet</h1>
+    <p>PhD Candidate in Ecology</p>
+  </header>
 
-<!-- Les boutons d'onglet -->
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Accueil')">Home</button>
-  <button class="tablinks" onclick="openTab(event, 'Publication')">About</button>
-  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
-</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#biography">Biography</a>
+    <a href="#publications">Publications</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- Contenu des onglets -->
-<div id="Accueil" class="tabcontent">
-  <h2>Home</h2>
-  <p>Ceci est la page d'accueil de mon site web.</p>
-</div>
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Welcome to my academic webpage! I am a PhD candidate specializing in ecology, conservation biology, community ecology, macroecology, and biogeography. I study the links between biodiversity, ecosystem functions, and human use patterns in the Anthropocene.</p>
+  </section>
 
-<div id="Publication" class="tabcontent">
-  <h2>About</h2>
-  <p>Ceci est une section à propos de moi ou de mon site.</p>
-</div>
+  <section id="biography">
+    <h2>Biography</h2>
+    <p>I am currently pursuing my PhD in ecology at [Your University], under the supervision of [Your Supervisor]. My doctoral research focuses on the functional diversity of vertebrates and the impacts of human use on extinction risk and biogeographical patterns.</p>
 
-<div id="Contact" class="tabcontent">
-  <h2>Contact</h2>
-  <p>Vous pouvez me contacter ici.</p>
-</div>
+    <h3>Research Interests</h3>
+    <ul>
+      <li>Biodiversity conservation</li>
+      <li>Community ecology and functional diversity</li>
+      <li>Macroecology and biogeography</li>
+      <li>Anthropogenic pressures on ecosystems</li>
+    </ul>
+  </section>
 
-<script>
-  // Fonction pour ouvrir l'onglet choisi
-  function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    
-    // Cache tous les contenus d'onglets
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Bouchet, P. (2024). <em>Title of the publication</em>. <strong>Journal of Biogeography</strong>. <a href="#">[DOI]</a></li>
+      <!-- Add more publications here -->
+    </ul>
+  </section>
 
-    // Enlève la classe "active" de tous les onglets
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+  <section id="research">
+    <h2>Research</h2>
+    <p>My research investigates how vertebrate functional traits relate to anthropogenic uses and threats. I combine trait-based ecology, species distribution data, and conservation risk assessments.</p>
+    <ul>
+      <li>Trait-based prediction of extinction risk</li>
+      <li>Global patterns of vertebrate use by humans</li>
+      <li>Functional erosion in biodiversity hotspots</li>
+    </ul>
+  </section>
 
-    // Affiche l'onglet sélectionné et ajoute la classe "active"
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-</script>
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>I teach undergraduate courses in community ecology, biodiversity analysis, and R-based ecological statistics. I am also actively involved in student mentoring and ecological fieldwork training.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@domain.com">your.email@domain.com</a></p>
+    <p>ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">orcid.org/0000-0000-0000-0000</a></p>
+    <p>ResearchGate: <a href="https://www.researchgate.net/profile/YourName" target="_blank">Your Profile</a></p>
+    <p>Google Scholar: <a href="https://scholar.google.com/citations?user=yourID" target="_blank">Your Profile</a></p>
+    <p><a href="cv.pdf" target="_blank">Curriculum Vitae (PDF)</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Pierre Bouchet — Last updated April 2025</p>
+  </footer>
 
 </body>
 </html>
